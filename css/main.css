@@ -1,9 +1,10 @@
 :root {
-    --theme: #0404aa;
+    --theme: #03037d;
     --mainText: rgba(255, 255, 255, 0.925);
 }
 
 body {
+    background-color: var(--theme);
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -11,11 +12,19 @@ body {
 header {
     display: flex;
     align-items: center;
-    background-color: var(--theme);
     height: 50px;
     width: 100%;
     padding: 1%;
-    margin-left: 0;
+    margin-left: 0px;
+}
+
+h1, h2, h3, p {
+    color: var(--mainText);
+}
+
+nav {
+    position: absolute;
+    right: 5px;
 }
 
 h1 {
@@ -33,14 +42,20 @@ ul {
 }
 
 
-a {
+nav a {
     background-color: unset;
     color: var(--mainText);
     font-weight: bold;
+    text-decoration: underline 2px;
+}
+
+a {
+    background-color: unset;
+    color: var(--mainText);
     text-decoration: none;
 }
 
-a:hover {
+nav a:hover {
     color: var(--theme);
     background-color: var(--mainText);
 }
@@ -55,8 +70,19 @@ a:hover {
 
 }
 
-.avatar {
-    background-image: url("../images/avatar.png");
-    background-repeat: no-repeat;
-    height: 200px;
+.hero-background img {
+    border-radius: 50%;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    border: 3px solid var(--themes);
+}
+
+mso a, tig a, aplc a, gg a {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
