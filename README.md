@@ -16,4 +16,4 @@ To view any of my projects you can click on the titles which will take you to th
 
 ## Credits
 
-For the choice of semantic tags: https://www.w3schools.com/html/html5_semantic_
+For round photo: https://www.w3schools.com/howto/howto_css_rounded_images.asp
