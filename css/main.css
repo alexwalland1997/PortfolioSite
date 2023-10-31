@@ -26,6 +26,27 @@ h1, h2, h3, p {
     color: var(--mainText);
 }
 
+/*altering for phone screen*/
+@media only screen and (max-width: 480){
+    #nav {
+        display: none;
+    }
+
+    #workGrid {
+        margin: 0px 5%;
+        display: grid;
+        min-height: auto;
+         grid-template-rows: 300px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "title"
+        "mso"
+        "aplc"
+        "tig"
+        "gg";
+        
+    }
+}
 nav {
     position: absolute;
     right: 5px;
@@ -98,13 +119,14 @@ nav a:hover {
     width: 100%;
     text-align: center;
     margin-left: 31%;
+    line-height: 2;
 }
 
 /*grid to show off projects*/
 #workGrid {
     margin: 0px 5%;
     display: grid;
-    min-height: auto;
+    height: 750px;
      grid-template-rows: 300px, 300px, 300px;
     grid-template-columns: 1fr, 1fr, 1fr;
     grid-template-areas: 
@@ -168,6 +190,10 @@ workGridArea {
   display: grid;
   align-content: end;
 
+}
+
+#mso:hover, #tig:hover, #aplc:hover, #gg:hover {
+    background-color: black;
 }
 
 h3, #mso p, #tig p, #aplc p, #gg p {
