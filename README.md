@@ -12,7 +12,7 @@ In order to run this site you need to download this repo and open the index.html
 
 To view any of my projects you can click on the titles which will take you to the corresponding github repository as well as being able to send me a email as well as view my socials.
 
-![alt text](/images/example.png)
+![alt text](/images/screenshot.png)
 
 ## Credits
 
