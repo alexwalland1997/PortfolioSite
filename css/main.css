@@ -6,7 +6,6 @@
 
 body {
   background-color: var(--theme);
-  width: 100% auto;
   height: 100%;
   margin: 0 auto;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -29,22 +28,27 @@ p {
   color: var(--mainText);
 }
 
+/*set contact number font colour and to bold*/
+li{
+  color: var(--mainText);
+  font-weight: bold;
+}
+
 /*altering for phone screen*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   nav {
     display: none !important;
   }
 
-  h2 {
-    display: block;
-    width: 100% !important;
-  }
   #workGrid {
     margin-left: 50px !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: center;
     display: grid;
     min-height: auto;
-    grid-template-rows: 300px;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 75px;
+    grid-template-columns: 50px, repeat(5, 1fr);
     grid-template-areas:
       "title"
       "mso"
@@ -52,6 +56,10 @@ p {
       "tig"
       "gg"
       "spaceinvaders" !important;
+  }
+
+  ul {
+    
   }
 }
 nav {
@@ -69,29 +77,35 @@ nav ul {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
-  min-width: 300px;
+  min-width: 400px;
   list-style-type: none;
 }
 
-nav a {
-  padding: 5px;
-  background-color: unset;
-  color: var(--mainText);
-  font-weight: bold;
-  text-decoration: underline 2px;
-}
-
+/*create interactive links*/
 a {
-  background-color: unset;
   color: var(--mainText);
   text-decoration: none;
+  font-weight: 700;
+  position: relative;
 }
 
-/*revert colours on highlight*/
-nav a:hover {
-  color: var(--theme);
-  background-color: var(--mainText);
+a::before {
+  content: '';
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
 }
+
+a:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+
 /*set background image */
 .hero-background {
   background-image: url("../images/hero-bg.jpeg");
@@ -204,7 +218,8 @@ nav a:hover {
 #mso,
 #tig,
 #aplc,
-#gg {
+#gg,
+#space-invaders {
   filter: brightness(60%);
 }
 
@@ -212,7 +227,8 @@ nav a:hover {
 #mso:hover,
 #tig:hover,
 #aplc:hover,
-#gg:hover {
+#gg:hover,
+#space-invaders:hover {
   filter: brightness(80%);
 }
 
@@ -221,7 +237,8 @@ h3,
 #mso p,
 #tig p,
 #aplc p,
-#gg p {
+#gg p,
+#space-invaders p {
   background-color: rgba(0, 0, 0, 0.696);
   margin: 0;
 }
@@ -243,19 +260,18 @@ h3,
   align-items: flex-start;
   height: 100px;
   width: 100%;
-  padding: 1%;
   margin-left: 20px;
 }
 
 #contact-me ul {
-  width: 125%;
+  width: 100%;
   margin-left: 35%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 25px;
-  min-width: 300px;
   list-style-type: none;
+  padding-right: 200px;
 }
 
 footer {
